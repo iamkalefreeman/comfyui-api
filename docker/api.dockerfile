@@ -10,7 +10,8 @@ ENV STARTUP_CHECK_MAX_TRIES=30
 
 ARG api_version=1.9.2
 
-ADD https://github.com/iamkalefreeman/comfyui-api/releases/download/${api_version}/comfyui-api .
+# Don't replace "SaladTechnologies" with unofficial API release.
+ADD https://github.com/SaladTechnologies/comfyui-api/releases/download/${api_version}/comfyui-api .
 
 RUN chmod +x comfyui-api
 
