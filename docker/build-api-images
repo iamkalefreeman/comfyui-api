@@ -9,7 +9,8 @@ cuda_version=${3:-12.8}
 current_api_version=$(cat ../package.json | jq -r '.version')
 api_version=${4:-$current_api_version}
 
-bases=("devel" "runtime")
+# bases=("devel" "runtime")
+bases=("runtime")
 
 for base in "${bases[@]}"; do
   docker build -t ghcr.io/iamkalefreeman/comfyui-api:comfy$comfy_version-api$api_version-torch$torch_version-cuda$cuda_version-$base \
