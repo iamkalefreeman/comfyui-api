@@ -13,5 +13,5 @@ for base in "${bases[@]}"; do
   docker push ghcr.io/iamkalefreeman/comfyui-api:comfy$comfy_version-torch$torch_version-cuda$cuda_version-$base
 done
 
-docker tag ghcr.io/iamkalefreeman/comfyui-api:comfy$comfy_version-torch$torch_version-cuda$cuda_version-runtime ghcr.io/saladtechnologies/comfyui-api:base
+docker tag ghcr.io/iamkalefreeman/comfyui-api:comfy$comfy_version-torch$torch_version-cuda$cuda_version-runtime ghcr.io/iamkalefreeman/comfyui-api:base
 docker push ghcr.io/iamkalefreeman/comfyui-api:base
